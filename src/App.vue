@@ -1,16 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<product-card-list :card-dataList="notebooksList"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import ProductCardList from "./components/ProductCardList.vue";
+import { notebooksList } from "./constants/3_data_notebooks";
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+
+components: {
+  ProductCardList,
+},
+
+data() {
+  return {
+    notebooksList
   }
+},
 }
 </script>
 
